@@ -1,0 +1,125 @@
+<?
+####################################
+#
+# COPYRIGHT BY Sebastian Harke 2010
+#
+####################################
+?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<?=get_setting_data(google_verify);?>
+<meta name="description" content="<? echo $p_description;?>">
+<meta name="keywords" content="<? echo $p_keywords;?>">
+<meta name="robots" content="index,follow,noodp">
+<meta name="revisit-after" content="1 days">
+<meta name='distribution' content='global'>
+<meta name="page-topic" content="drawWebkatalog"> 
+<meta name="language" content="deutsch, DE">
+<meta name="copyright" content="drawWEBKATALOG Engine &copy; 2010 by www.draw-design.com">
+<base href="<?=$page_url;?>/">
+<link rel="shortcut icon" href="<?=$page_url;?>/<? echo $page_ico; ?>">
+<link rel="stylesheet" href="templates/dwk/css/style.css" type="text/css">
+<title><? echo "".$p_title." - ".$page_name.""; ?></title>
+</head>
+<body>
+
+<div align="center">
+<table border="0" width="850" cellspacing="0" cellpadding="0" id="page">
+	<tr>
+		<td class="head" width="850" colspan="3">
+        <!-- Banner Head -->
+        <?=$banner_head;?><br>
+        </td>
+	</tr>
+	<tr>
+		<td class="nav_main" width="850" colspan="3">
+		<a href="<? echo $page_url; ?>"<? echo $lhome;?>>Startseite</a><a href="<? echo $page_url; ?>/seite-eintragen/1.html"<? echo $ladd;?> rel="nofollow">Seite Vorschlagen</a><a href="<? echo $page_url; ?>/top-seiten/1.html"<? echo $ltop;?>>Top Seiten</a><a href="<? echo $page_url; ?>/neusten-seiten/1.html"<? echo $lnew;?>>Neusten Seiten</a><a href="<? echo $page_url; ?>/seite-suchen/1.html"<? echo $lsuche;?> rel="nofollow">Suchen</a><a href="<? echo $page_url; ?>/hilfe-seite/1.html"<? echo $lhelp;?> rel="nofollow">Hilfe</a>
+		</td>
+	</tr>
+    <tr>
+		<td class="nav_main_sub" width="850" colspan="3">
+        
+<div id="site_navi">
+<div id="c_nav_01"><img src="templates/dwk/images/home.gif" border="0" alt="Webkatalog"></div>
+<div id="c_nav_02"><? echo $bc_link; ?></div>
+</div>
+
+<script type="text/javascript" src="http://oneurl.de/qrcode.js"></script>
+
+        </td>
+    </tr>
+	<tr>
+		<td class="nav_sub" valign="top" width="250">
+
+        <div class="sub_navi">
+        <div class="sub_navi_top"><strong>Navigation</strong></div>
+        <div class="sub_navi_middle">
+        <ul>
+        <li><a href="<? echo $page_url; ?>">Startseite</a></li>
+        <li><a href="<? echo $page_url; ?>/seite-eintragen/1.html" rel="nofollow">Seite eintragen</a></li>
+        <li><a href="<? echo $page_url; ?>/top-seiten/1.html">Top Seiten</a></li>
+        <li><a href="<? echo $page_url; ?>/neusten-seiten/1.html">Neusten Seiten</a></li>
+        <li><a href="<? echo $page_url; ?>/hilfe-seite/1.html" rel="nofollow">Hilfe & Info</a></li>
+        <li><a href="<? echo $page_url; ?>/seite-suchen/1.html" rel="nofollow">Suchen</a></li>
+        </ul>
+        </div>
+        </div>
+              
+        
+        <div class="sub_navi">
+        <div class="sub_navi_top"><strong>Neue Seiten</strong></div>
+        <div class="sub_navi_middle">
+        <ul>
+        <? get_last_5_links(); ?>
+        </ul>
+        </div>
+        </div> 
+        
+        <div class="sub_navi">
+        <div class="sub_navi_top"><strong>Neue Kategorien</strong></div>
+        <div class="sub_navi_middle">
+        <ul>
+        <? get_last_5_cats(); ?>
+        </ul>
+        </div>
+        </div> 
+        
+              
+        <div class="sub_navi">
+        <div class="sub_navi_top"><strong>Webkatalog Infos</strong></div>
+        <div class="sub_navi_middle">
+        <ul>
+        <li><a>Einträge Gesamt: <? echo countAllLinks();?></a></li>
+        <li><a>Kategorien Gesamt : <? echo countAllCats();?></a></li>
+        </ul>
+        </div>
+        </div> 
+		
+        <div id="language">
+        <p><a href='http://fadeout.de/' target="_blank"><img src='http://fadeout.de/images/banner-80x15.gif'></a></p>
+        <p><?=$banner_sitenav;?></p>
+        </div>
+        <br>
+        
+        </td>
+		<td class="content" valign="top" width="600">       
+        <? include(CONTENT); ?>
+        <br><br>
+        </td>
+	</tr>
+	<tr>
+		<td class="foot" width="840" colspan="3"><a href="<? echo $page_url; ?>/kontakt/1.html" rel="nofollow">Kontakt</a> | <a href="<? echo $page_url; ?>/impressum/1.html" rel="nofollow">Impressum</a> | <a href="<? echo $page_url; ?>/nutzungsbedingung/1.html" rel="nofollow">Nutzungsbedingung</a> | <a href="<? echo $page_url; ?>/agbs/1.html" rel="nofollow">AGBs</a>
+        </td>
+	</tr>
+</table>
+
+<div id="drawdesign">drawWEBKATALOG Engine &copy; <?=date('Y');?> by <a href="http://www.draw-design.com">drawDESIGN</a></div>
+
+</div>
+
+<?=get_setting_data(google_analytics);?>
+
+</body>
+</html>

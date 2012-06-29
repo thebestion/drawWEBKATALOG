@@ -1,0 +1,18 @@
+<? if($item_look=="seite_item_star"){ ?>
+<div id="<? echo $item_look; ?>">
+<div id="seite_item_top"><a href="<? echo $get_cat['url']; ?>" target="_blank" title="<? echo $get_cat['titel']; ?>"><h1><strong><? echo $get_cat['titel']; ?></strong></h1></a></div>
+<div id="seite_item_left">
+<a href="<? echo $get_cat['url']; ?>" target="_blank" rel="nofollow" title="<? echo $get_cat['url']; ?>"><img border="0" src="http://fadeout.de/thumbshot-pro/?url=<? echo urlencode($get_cat['url']); ?>&scale=5" alt="<? echo $get_cat['titel']; ?>" width="148" height="180"></a></div>
+<div id="seite_item_right">
+<div id="prew_sub_cats"><? echo $get_cat['beschreibung']; ?></div></div><br clear="left" />
+<div id="<? echo $item_look_bottom; ?>"><a href="<? echo $get_cat['id_link']."-".getUrlName($get_cat['url']) ?>/4.html" rel="follow">Eintrag Details</a></div>
+</div>
+<br clear="left" />
+<? }elseif($item_look=="seite_item"){ ?>
+<div id="<? echo $item_look; ?>">
+<div id="seite_item_top"><a href="<? echo $get_cat['url']; ?>" target="_blank" title="<? echo $get_cat['titel']; ?>"><h1><strong><? echo $get_cat['titel']; ?></strong></h1></a></div>
+<div id="prew_sub_cats"><? echo $get_cat['beschreibung']; ?></div></div><br clear="left" />
+<div id="<? echo $item_look_bottom; ?>"><a href="<? echo $get_cat['id_link']."-".getUrlName($get_cat['url']); ?>/4.html" rel="follow">Eintrag Details</a>
+</div>
+<br clear="left" />
+<? } ?>

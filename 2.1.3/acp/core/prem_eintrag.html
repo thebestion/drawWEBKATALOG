@@ -1,0 +1,15 @@
+<tr onmouseover="style.backgroundColor='#95d8fe'" onmouseout="style.backgroundColor=''">
+<td id="item" width="410">
+<span><img border="0" src="img/link2.png" width="16" height="19"></span> <span><a href="index.php?s=link_edit&p=<?=$get_seite_id;?>"><?=get_link_url_by_id($get_cat['id_link']);?></a></span>
+</td>
+<td id="item" width="100"><?=$get_cat['payday'];?></a></td>
+<td id="item" width="100"><?=$get_cat['prem_end'];?></a></td>
+<td id="item" width="140"><?=$get_cat['prem_remember'];?></a></td>
+
+<td id="item" width="30"><a href="<?=get_link_url_by_id($get_cat['id_link']);?>" target="_blank" title="Eintrag anschauen">
+<img border="0" src="img/page_find.png" alt="Seite anschauen" width="16" height="16"></a>
+</td>
+<td id="item" width="30"><a href="index.php?s=prem_eintrag&p=<?=$get_cat['Id'];?>&a=del&ps=<?=$pagesite;?>" title="Eintrag l&ouml;schen">
+<img border="0" src="img/page_delete.gif" width="16" height="16" alt="l&ouml;schen"></a>
+</td>
+</tr>

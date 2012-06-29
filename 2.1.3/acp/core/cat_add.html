@@ -1,0 +1,62 @@
+<br /><br />
+<h2>Neue Kategorie anlegen</h2>
+<form method="POST" action="">
+<input type="hidden" name="send" value="add">
+<table border="0" width="488" cellspacing="0" cellpadding="5" style="border:1px solid #CCCCCC;">
+    <tr>
+		<td height="24" width="200">
+        <strong>Aktivieren:</strong>
+        </td>
+		<td height="24" width="288">		
+		<input type="checkbox" name="aktiv" value="1"></td>
+	</tr>
+    <tr>
+		<td height="24" width="200">
+        <strong>Unterkategorie von:</strong>
+        </td>
+		<td height="24" width="288">		
+		<?=getTopCategorieDropdown();?>
+        </td>
+	</tr>
+	<tr>
+		<td height="24" width="200">
+        <strong>Titel:</strong>
+        </td>
+
+		<td height="24" width="288"><input type="text" name="titel" size="35" value="<?=$_GET['title'];?>"></td>
+	</tr>
+	<tr>
+		<td height="24" width="200">
+        <strong>Url Alias:</strong>
+        </td>
+		<td height="24" width="288"><input type="text" name="alias" size="35"></td>
+
+	</tr>
+	<tr>
+		<td height="24" width="200" valign="top">
+        <strong>Beschreibung:</strong>
+        </td>
+		<td height="24" width="288"><textarea name="beschreibung" cols="35" rows="5"></textarea></td>
+	</tr>
+	<tr>
+		<td height="24" width="200" valign="top">
+        <strong>Meta Description:</strong>
+        </td>
+		<td height="24" width="288"><textarea name="description" cols="35" rows="5"></textarea></td>
+	</tr>
+	<tr>
+
+		<td height="24" width="200" valign="top">
+        <strong>Meta Keywords:</strong>
+        </td>
+		<td height="24" width="288"><textarea name="keywords" cols="35" rows="5"></textarea></td>
+	</tr>
+	
+	<tr>
+		<td height="24" width="200">&nbsp;</td>
+		<td height="24" width="288">
+		<input type="submit" class="submit" value="Speichern" name="B1">
+        </td>
+	</tr>
+</table>
+</form>

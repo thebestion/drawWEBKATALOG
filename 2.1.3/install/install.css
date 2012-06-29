@@ -1,0 +1,70 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {  
+background-color: #FFFFFF; 
+margin:0px;
+font-family: Verdana, Arial, Helvetica, sans-serif; 
+font-size: 11px; 
+color: #565656; 
+text-decoration: none}
+#install{
+margin:auto;
+width:600px;
+text-align:left;
+padding-left:15px;}
+#field {
+width: 480px;
+padding:5px;
+margin:0px;
+border-top: 0px solid #9c9c9c;
+text-align:left;}
+#form_tag {
+float: left;
+width: 135;
+padding:0px;
+text-align:left;}
+#form_field {
+margin-left:155px;
+padding:0px;
+text-align:left;}
+h2{ color:#40b1e1; }
+
+input, textarea { 
+	padding: 4px;
+	border: solid 1px #E5E5E5;
+	outline: 0;
+	font: normal 11px/100% Verdana, Tahoma, sans-serif;
+	background: #FFFFFF url('bg_form.png') left top repeat-x;
+	background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #EEEEEE), to(#FFFFFF));
+	background: -moz-linear-gradient(top, #FFFFFF, #EEEEEE 1px, #FFFFFF 25px);
+	box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-moz-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	-webkit-box-shadow: rgba(0,0,0, 0.1) 0px 0px 8px;
+	}
+
+textarea { 
+	line-height: 150%;
+	}
+
+input:hover, textarea:hover,
+input:focus, textarea:focus { 
+	border-color: #C9C9C9; 
+	-webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
+	}
+
+.form label { 
+	margin-left: 10px; 
+	color: #999999; 
+	}
+
+.submit {
+	width: auto;
+	padding: 7px 12px;
+	background: #40b1e1;
+	border: 0;
+	font-size: 12px;
+	color: #FFFFFF;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	}

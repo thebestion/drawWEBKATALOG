@@ -1,0 +1,10 @@
+<!-- date 	ip_adresse 	methode  call_url 	user_infos 	from_url 890 -->
+
+
+<tr onmouseover="style.backgroundColor='#95d8fe'" onmouseout="style.backgroundColor=''">
+<td id="pnodes" width="90"><?=$get_cat['date'];?></td>
+<td id="item" width="10"><?=$get_cat['ip_adresse'];?></td>
+<td id="item" width="10"><?=$get_cat['methode'];?></td>
+<td id="item" width="200"><?=$get_cat['call_url'];?></td>
+<td id="item" width="200"><?=getCutStrip($get_cat['from_url'],"42","...");?></td>
+</tr>

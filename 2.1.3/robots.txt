@@ -1,0 +1,9 @@
+User-agent: * 
+Disallow: /acp/
+Disallow: /configs/
+Disallow: /core/
+Disallow: /templates/
+Disallow: /out.php
+Disallow: /eshoppe24.xml
+
+Sitemap: http://www.domain.de/sitemap.xml
