@@ -1,0 +1,27 @@
+ErrorDocument 401 /
+ErrorDocument 403 /
+ErrorDocument 404 /
+ErrorDocument 500 /
+
+RewriteEngine on	
+RewriteBase /
+
+# Nur eine URL
+# RewriteCond %{HTTP_HOST} !^www\.Ihre-Domain\.de$
+# RewriteRule ^(.*)$ http://www.Ihre-Domain.de/$1 [L,R=301]
+
+# Url ohne PHP SESSION
+# RewriteCond %{QUERY_STRING} PHPSESSID
+# RewriteRule ^(.*)$ http://www.Ihre-Domain.de/$1? [L,R=301]
+
+# Google Sitemap
+# RewriteRule ^sitemap.xml$ http://www.Ihre-Domain.de/sitemap.php [L]
+
+# Startseite
+# RewriteRule ^startseite/1.html$ http://www.Ihre-Domain.de/ [L,R=301]
+
+# Rewrite Rules
+RewriteRule ^([-0-9a-z]*)/([-0-9a-z]*)/([-0-9a-z]*).html?([-0-9a-z]*)$ index.php?c=$1&m=$2&s=$3&q=$4
+RewriteRule ^([-0-9a-z]*)/([-0-9a-z]*)/([-0-9a-z]*).html$ index.php?c=$1&m=$2&s=$3
+RewriteRule ^([-0-9a-z]*)/([-0-9a-z]*).html$ index.php?c=$1&m=$2
+RewriteRule ^([-0-9a-z]*).html$ index.php?c=$1 [L]
